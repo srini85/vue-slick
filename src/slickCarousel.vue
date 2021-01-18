@@ -106,6 +106,11 @@ export default {
       $(this.$el).slick('slickFilter', filterData);
     },
 
+    resize: function() {
+      $(this.$el).find('.slick-slide').height(auto);
+      $(this.$el).slick('setOption', null, null, true);
+    },
+
     unfilter: function() {
       $(this.$el).slick('slickUnfilter');
     },
